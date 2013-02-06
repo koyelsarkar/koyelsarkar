@@ -1,0 +1,36 @@
+<h2>Editing User</h2>
+<%= form_for @user do |b|%>
+<div>
+<%= b.label:firstname%><br/>
+<%= b.text_field:firstname%>
+</div>
+<div>
+<%= b.label:lastname%><br/>
+<%= b.text_field:lastname%>
+</div>
+<div>
+<%= b.label:email%><br/>
+<%= b.text_field:email%>
+</div>
+<div>
+<%= b.label:age%><br/>
+<%= b.text_field:age%>
+</div>
+<div>
+<%= b.label:contactno%><br/>
+<%= b.text_field:contactno%>
+</div>
+<div>
+<%= b.label:gender%>
+<%= b.text_field:gender%>
+</div>
+<div>
+<%= b.label:country%>
+<%= b.text_field:country%>
+</div>
+<%=b.submit%>
+<%end%>
+<%=link_to "Show", user_path(@user)%>&nbsp|
+<%=link_to "Back", users_path%>
+
+

@@ -1,0 +1,6 @@
+<% @posts.each do |post|%>
+<%= post.title%>
+<%= post.description%>
+<%= link_to "destroy", user_posts_path%>
+<%end%>
+<%= link_to "create post", new_user_post_path(@user)%>

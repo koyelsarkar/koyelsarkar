@@ -1,0 +1,45 @@
+<h2>My details:</h2>
+<p>
+<b>Name:</b>
+<%=@user.firstname%>
+<%=@user.lastname%>
+</p>
+<p>
+<b>Email id:</b>
+<%=@user.email%>
+</p>
+<p>
+<b>Age:</b>
+<%=@user.age%>
+</p>
+<p>
+<b>Contact No:</b>
+<%=user.contactno%>
+</p>
+<p>
+<b>Gender:</b>
+<%=user.gender%>
+</p>
+<p>
+<b>Country:</b>
+<%=user.country%>
+</p>
+<%= link_to "Edit", edit_user_path(@user)%>&nbsp||
+<%= link_to "Back", users_path%>
+<h2>My Posts::------</h2>
+<%@user.posts.each do |post|%>
+<p>
+<b>Title:</b>
+<%=post.title%>
+</p>
+<p>
+<b>Description:</b>
+<%=post.description%>
+</p>
+<%= link_to "Edit Post",edit_user_post_path(post.user,post)%>&nbsp|
+<%= link_to "Destroy Post", [post.user,post],:confirm => 'Are you sure', :method => :delete%><br/>
+<%end%>
+<p>
+<%= link_to "Create New Post", new_user_post_path(@user)%>
+</p>
+
